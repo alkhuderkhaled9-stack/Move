@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "movies": "الأفلام",
+    "search": "بحث",
+    "favorites": "المفضلة"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "tryAgain": "حاول مرة أخرى",
+    "noResults": "لم يتم العثور على نتائج"
+  },
+  "movie": {
+    "rating": "التقييم",
+    "releaseDate": "تاريخ الإصدار",
+    "runtime": "المدة",
+    "genres": "التصنيفات",
+    "overview": "نظرة عامة",
+    "cast": "طاقم التمثيل"
+  },
+  "search": {
+    "placeholder": "ابحث عن الأفلام...",
+    "results": "نتائج البحث"
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  }
+}
