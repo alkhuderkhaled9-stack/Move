@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "home": "Home",
+    "movies": "Movies",
+    "search": "Search",
+    "favorites": "Favorites"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "tryAgain": "Try Again",
+    "noResults": "No results found"
+  },
+  "movie": {
+    "rating": "Rating",
+    "releaseDate": "Release Date",
+    "runtime": "Runtime",
+    "genres": "Genres",
+    "overview": "Overview",
+    "cast": "Cast"
+  },
+  "search": {
+    "placeholder": "Search movies...",
+    "results": "Search Results"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
