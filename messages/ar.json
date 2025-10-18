@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "movies": "الأفلام",
+    "favorites": "المفضلة",
+    "search": "ابحث عن فيلم..."
+  },
+  "home": {
+    "hero": {
+      "watchNow": "شاهد الآن",
+      "moreInfo": "المزيد من المعلومات"
+    },
+    "trending": "الأكثر رواجاً هذا الأسبوع",
+    "popular": "الأفلام الشائعة"
+  },
+  "movie": {
+    "rating": "التقييم",
+    "releaseDate": "تاريخ الإصدار",
+    "overview": "نبذة",
+    "cast": "طاقم التمثيل",
+    "addToFavorites": "إضافة للمفضلة",
+    "removeFromFavorites": "إزالة من المفضلة"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "noMoviesFound": "لم يتم العثور على أفلام",
+    "tryDifferentSearch": "جرب كلمة بحث مختلفة أو تصفح مجموعتنا"
+  },
+  "errors": {
+    "somethingWentWrong": "حدث خطأ ما",
+    "defaultError": "تعذر تحميل الأفلام. يرجى المحاولة مرة أخرى.",
+    "tryAgain": "حاول مرة أخرى",
+    "movieNotFound": "الفيلم غير موجود",
+    "networkError": "خطأ في الاتصال. يرجى التحقق من اتصالك بالإنترنت."
+  },
+  "theme": {
+    "light": "فاتح",
+    "dark": "داكن",
+    "system": "النظام"
+  }
+}

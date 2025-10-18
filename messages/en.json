@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "movies": "Movies",
+    "favorites": "Favorites",
+    "search": "Search movies..."
+  },
+  "home": {
+    "hero": {
+      "watchNow": "Watch Now",
+      "moreInfo": "More Info"
+    },
+    "trending": "Trending This Week",
+    "popular": "Popular Movies"
+  },
+  "movie": {
+    "rating": "Rating",
+    "releaseDate": "Release Date",
+    "overview": "Overview",
+    "cast": "Cast",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites"
+  },
+  "common": {
+    "loading": "Loading...",
+    "noMoviesFound": "No movies found",
+    "tryDifferentSearch": "Try a different search term or browse our collection"
+  },
+  "errors": {
+    "somethingWentWrong": "Something went wrong",
+    "defaultError": "We couldn't load the movies. Please try again.",
+    "tryAgain": "Try Again",
+    "movieNotFound": "Movie not found",
+    "networkError": "Network error. Please check your connection."
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
