@@ -23,8 +23,10 @@ export function Navbar() {
             href={`/${locale}`}
             className="flex items-center gap-2 font-bold text-xl"
           >
-            <Film className="h-6 w-6" />
-            <span>Movies</span>
+            <Film className="h-6 w-6 text-primary" />
+            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              MovieHub
+            </span>
           </Link>
 
           {/* Navigation Links */}
