@@ -43,7 +43,6 @@ export default function MovieDetailsPage({ params }: MovieDetailsPageProps) {
 
   const {
     data: credits,
-    isLoading: creditsLoading,
   } = useMovieCredits(movieId);
 
   const {
@@ -163,7 +162,7 @@ export default function MovieDetailsPage({ params }: MovieDetailsPageProps) {
                   </h1>
                   {movie.tagline && (
                     <p className="mt-2 text-lg italic text-muted-foreground">
-                      "{movie.tagline}"
+                      &ldquo;{movie.tagline}&rdquo;
                     </p>
                   )}
                 </div>
