@@ -46,19 +46,21 @@ export const spokenLanguageSchema = z.object({
 });
 
 // Movie Details schema
-export const movieDetailsSchema = movieSchema.extend({
-  runtime: z.number(),
-  genres: z.array(genreSchema),
-  budget: z.number(),
-  revenue: z.number(),
-  status: z.string(),
-  tagline: z.string(),
-  homepage: z.string(),
-  imdb_id: z.string(),
-  production_companies: z.array(productionCompanySchema),
-  production_countries: z.array(productionCountrySchema),
-  spoken_languages: z.array(spokenLanguageSchema),
-});
+export const movieDetailsSchema = movieSchema
+  .omit({ genre_ids: true })
+  .extend({
+    runtime: z.number(),
+    genres: z.array(genreSchema),
+    budget: z.number(),
+    revenue: z.number(),
+    status: z.string(),
+    tagline: z.string(),
+    homepage: z.string(),
+    imdb_id: z.string(),
+    production_companies: z.array(productionCompanySchema),
+    production_countries: z.array(productionCountrySchema),
+    spoken_languages: z.array(spokenLanguageSchema),
+  });
 
 // Cast schema
 export const castSchema = z.object({
