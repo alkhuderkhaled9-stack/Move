@@ -8,8 +8,11 @@ import {
   getUpcomingMovies,
   getNowPlayingMovies,
   searchMovies,
+  getMovieDetails,
+  getMovieCredits,
+  getSimilarMovies,
 } from '@/lib/tmdb/client';
-import type { Movie, TMDBResponse } from '@/lib/tmdb/types';
+import type { Movie, MovieDetails, Credits, TMDBResponse } from '@/lib/tmdb/types';
 
 /**
  * Hook to fetch trending movies
@@ -103,5 +106,52 @@ export function useSearchMovies(
     enabled: enabled && query.length > 0,
     staleTime: 1000 * 60 * 5, // 5 minutes
     gcTime: 1000 * 60 * 30, // 30 minutes
+  });
+}
+
+/**
+ * Hook to fetch movie details
+ * @param id - Movie ID
+ */
+export function useMovieDetails(
+  id: number
+): UseQueryResult<MovieDetails, Error> {
+  return useQuery({
+    queryKey: ['movie', 'details', id],
+    queryFn: () => getMovieDetails(id),
+    staleTime: 1000 * 60 * 60, // 1 hour
+    gcTime: 1000 * 60 * 60 * 24, // 24 hours
+  });
+}
+
+/**
+ * Hook to fetch movie credits (cast and crew)
+ * @param id - Movie ID
+ */
+export function useMovieCredits(
+  id: number
+): UseQueryResult<Credits, Error> {
+  return useQuery({
+    queryKey: ['movie', 'credits', id],
+    queryFn: () => getMovieCredits(id),
+    staleTime: 1000 * 60 * 60, // 1 hour
+    gcTime: 1000 * 60 * 60 * 24, // 24 hours
+  });
+}
+
+/**
+ * Hook to fetch similar movies
+ * @param id - Movie ID
+ * @param page - Page number
+ */
+export function useSimilarMovies(
+  id: number,
+  page: number = 1
+): UseQueryResult<TMDBResponse<Movie>, Error> {
+  return useQuery({
+    queryKey: ['movie', 'similar', id, page],
+    queryFn: () => getSimilarMovies(id, page),
+    staleTime: 1000 * 60 * 60, // 1 hour
+    gcTime: 1000 * 60 * 60 * 2, // 2 hours
   });
 }

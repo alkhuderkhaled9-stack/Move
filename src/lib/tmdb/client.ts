@@ -151,3 +151,24 @@ export async function getNowPlayingMovies(
     "force-cache"
   );
 }
+
+// Get similar movies
+export async function getSimilarMovies(
+  id: number,
+  page: number = 1
+): Promise<TMDBResponse<Movie>> {
+  return tmdbFetch(
+    `/movie/${id}/similar?page=${page}`,
+    tmdbResponseSchema(movieSchema),
+    "force-cache"
+  );
+}
+
+// Get movie videos (trailers)
+export async function getMovieVideos(id: number): Promise<any> {
+  return tmdbFetch(
+    `/movie/${id}/videos`,
+    { parse: (data: any) => data },
+    "force-cache"
+  );
+}

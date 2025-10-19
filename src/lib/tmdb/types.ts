@@ -17,7 +17,7 @@ export interface Movie {
   original_language: string;
 }
 
-export interface MovieDetails extends Movie {
+export interface MovieDetails extends Omit<Movie, 'genre_ids'> {
   runtime: number;
   genres: Genre[];
   budget: number;
