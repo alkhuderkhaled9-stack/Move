@@ -165,10 +165,10 @@ export async function getSimilarMovies(
 }
 
 // Get movie videos (trailers)
-export async function getMovieVideos(id: number): Promise<any> {
+export async function getMovieVideos(id: number): Promise<unknown> {
   return tmdbFetch(
     `/movie/${id}/videos`,
-    { parse: (data: any) => data },
+    { parse: (data: unknown) => data },
     "force-cache"
   );
 }
