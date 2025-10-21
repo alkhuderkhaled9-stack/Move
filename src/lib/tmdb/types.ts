@@ -23,9 +23,9 @@ export interface MovieDetails extends Omit<Movie, 'genre_ids'> {
   budget: number;
   revenue: number;
   status: string;
-  tagline: string;
-  homepage: string;
-  imdb_id: string;
+  tagline: string | null;
+  homepage: string | null;
+  imdb_id: string | null;
   production_companies: ProductionCompany[];
   production_countries: ProductionCountry[];
   spoken_languages: SpokenLanguage[];
