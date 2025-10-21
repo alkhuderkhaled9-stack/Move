@@ -56,5 +56,15 @@
     },
     "clearFilters": "مسح الفلاتر",
     "showingResults": "عرض {count} فيلم"
+  },
+  "searchPage": {
+    "title": "نتائج البحث",
+    "placeholder": "ابحث عن فيلم...",
+    "searching": "جاري البحث...",
+    "noQuery": "ابدأ الكتابة للبحث عن الأفلام",
+    "noResults": "لم يتم العثور على أفلام لـ \"{query}\"",
+    "tryDifferent": "جرب كلمة بحث مختلفة أو تصفح مجموعتنا",
+    "resultsFor": "نتائج البحث عن \"{query}\"",
+    "foundMovies": "تم العثور على {count} فيلم"
   }
 }

@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useTranslations } from "next-intl";
-import { Film, Search } from "lucide-react";
+import { Film } from "lucide-react";
 import { ThemeToggle } from "@/components/shared/theme-toggle";
 import { LanguageToggle } from "@/components/shared/language-toggle";
+import { SearchDropdown } from "@/components/shared/SearchDropdown";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export function Navbar() {
   const params = useParams();
@@ -46,14 +46,7 @@ export function Navbar() {
         {/* Search and Actions */}
         <div className="flex items-center gap-2">
           <div className="hidden sm:flex items-center gap-2">
-            <div className="relative">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder={t("search")}
-                className="w-[200px] lg:w-[300px] pl-8"
-              />
-            </div>
+            <SearchDropdown />
           </div>
 
           <LanguageToggle />
