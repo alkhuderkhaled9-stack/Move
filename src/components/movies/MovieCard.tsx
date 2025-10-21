@@ -4,12 +4,14 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Star, Calendar } from 'lucide-react';
+import { Star, Calendar, Heart } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { getImageUrl } from '@/lib/constants';
 import type { Movie } from '@/lib/tmdb/types';
 import { cn } from '@/lib/utils';
+import { useFavoritesStore } from '@/store/useFavoritesStore';
 
 interface MovieCardProps {
   movie: Movie;
@@ -20,9 +22,21 @@ interface MovieCardProps {
 export function MovieCard({ movie, priority = false, className }: MovieCardProps) {
   const router = useRouter();
   const [imageError, setImageError] = useState(false);
+  const { isFavorite, addFavorite, removeFavorite } = useFavoritesStore();
+
+  const favorite = isFavorite(movie.id);
 
   const handleClick = () => {
     router.push(`/movies/${movie.id}`);
+  };
+
+  const handleFavoriteClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (favorite) {
+      removeFavorite(movie.id);
+    } else {
+      addFavorite(movie);
+    }
   };
 
   const releaseYear = movie.release_date
@@ -68,6 +82,26 @@ export function MovieCard({ movie, priority = false, className }: MovieCardProps
                   {movie.vote_average.toFixed(1)}
                 </span>
               </Badge>
+            </div>
+
+            {/* Favorite Button */}
+            <div className="absolute top-2 left-2">
+              <Button
+                size="icon"
+                variant="secondary"
+                className={cn(
+                  "h-8 w-8 rounded-full bg-black/70 backdrop-blur-sm hover:bg-black/90 transition-colors",
+                  favorite && "text-red-500"
+                )}
+                onClick={handleFavoriteClick}
+              >
+                <Heart
+                  className={cn(
+                    "h-4 w-4 transition-all",
+                    favorite && "fill-red-500"
+                  )}
+                />
+              </Button>
             </div>
           </div>
 

@@ -66,5 +66,13 @@
     "tryDifferent": "Try a different search term or browse our collection",
     "resultsFor": "Results for \"{query}\"",
     "foundMovies": "Found {count} movies"
+  },
+  "favoritesPage": {
+    "title": "My Favorites",
+    "noFavorites": "No favorites yet",
+    "noFavoritesDescription": "Start adding movies to your favorites by clicking the heart icon",
+    "totalFavorites": "{count} favorites",
+    "addedToFavorites": "Added to favorites",
+    "removedFromFavorites": "Removed from favorites"
   }
 }

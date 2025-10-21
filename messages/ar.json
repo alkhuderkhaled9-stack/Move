@@ -66,5 +66,13 @@
     "tryDifferent": "جرب كلمة بحث مختلفة أو تصفح مجموعتنا",
     "resultsFor": "نتائج البحث عن \"{query}\"",
     "foundMovies": "تم العثور على {count} فيلم"
+  },
+  "favoritesPage": {
+    "title": "المفضلة",
+    "noFavorites": "لا توجد أفلام مفضلة",
+    "noFavoritesDescription": "ابدأ بإضافة أفلام للمفضلة بالضغط على أيقونة القلب",
+    "totalFavorites": "{count} فيلم مفضل",
+    "addedToFavorites": "تمت الإضافة للمفضلة",
+    "removedFromFavorites": "تمت الإزالة من المفضلة"
   }
 }
