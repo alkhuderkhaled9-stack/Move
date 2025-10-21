@@ -37,5 +37,24 @@
     "light": "فاتح",
     "dark": "داكن",
     "system": "النظام"
+  },
+  "moviesPage": {
+    "title": "اكتشف الأفلام",
+    "filters": "التصفية",
+    "sortBy": "ترتيب حسب",
+    "allGenres": "جميع الأنواع",
+    "genres": "الأنواع",
+    "sort": {
+      "popularityDesc": "الأكثر شعبية",
+      "popularityAsc": "الأقل شعبية",
+      "releaseDateDesc": "الأحدث أولاً",
+      "releaseDateAsc": "الأقدم أولاً",
+      "voteAverageDesc": "الأعلى تقييماً",
+      "voteAverageAsc": "الأقل تقييماً",
+      "titleAsc": "العنوان (أ-ي)",
+      "titleDesc": "العنوان (ي-أ)"
+    },
+    "clearFilters": "مسح الفلاتر",
+    "showingResults": "عرض {count} فيلم"
   }
 }

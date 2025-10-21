@@ -37,5 +37,24 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
+  },
+  "moviesPage": {
+    "title": "Discover Movies",
+    "filters": "Filters",
+    "sortBy": "Sort By",
+    "allGenres": "All Genres",
+    "genres": "Genres",
+    "sort": {
+      "popularityDesc": "Most Popular",
+      "popularityAsc": "Least Popular",
+      "releaseDateDesc": "Newest First",
+      "releaseDateAsc": "Oldest First",
+      "voteAverageDesc": "Highest Rated",
+      "voteAverageAsc": "Lowest Rated",
+      "titleAsc": "Title (A-Z)",
+      "titleDesc": "Title (Z-A)"
+    },
+    "clearFilters": "Clear Filters",
+    "showingResults": "Showing {count} movies"
   }
 }

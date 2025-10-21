@@ -11,6 +11,8 @@ import {
   getMovieDetails,
   getMovieCredits,
   getSimilarMovies,
+  getGenres,
+  discoverMovies,
 } from '@/lib/tmdb/client';
 import type { Movie, MovieDetails, Credits, TMDBResponse } from '@/lib/tmdb/types';
 
@@ -153,5 +155,34 @@ export function useSimilarMovies(
     queryFn: () => getSimilarMovies(id, page),
     staleTime: 1000 * 60 * 60, // 1 hour
     gcTime: 1000 * 60 * 60 * 2, // 2 hours
+  });
+}
+
+/**
+ * Hook to fetch all movie genres
+ */
+export function useGenres(): UseQueryResult<{ genres: { id: number; name: string }[] }, Error> {
+  return useQuery({
+    queryKey: ['genres'],
+    queryFn: () => getGenres(),
+    staleTime: 1000 * 60 * 60 * 24, // 24 hours
+    gcTime: 1000 * 60 * 60 * 48, // 48 hours
+  });
+}
+
+/**
+ * Hook to discover movies with filters
+ * @param params - Filter parameters (page, with_genres, sort_by)
+ */
+export function useDiscoverMovies(params: {
+  page?: number;
+  with_genres?: string;
+  sort_by?: string;
+}): UseQueryResult<TMDBResponse<Movie>, Error> {
+  return useQuery({
+    queryKey: ['movies', 'discover', params],
+    queryFn: () => discoverMovies(params),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    gcTime: 1000 * 60 * 30, // 30 minutes
   });
 }
