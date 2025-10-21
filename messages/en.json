@@ -56,5 +56,15 @@
     },
     "clearFilters": "Clear Filters",
     "showingResults": "Showing {count} movies"
+  },
+  "searchPage": {
+    "title": "Search Results",
+    "placeholder": "Search for movies...",
+    "searching": "Searching...",
+    "noQuery": "Start typing to search for movies",
+    "noResults": "No movies found for \"{query}\"",
+    "tryDifferent": "Try a different search term or browse our collection",
+    "resultsFor": "Results for \"{query}\"",
+    "foundMovies": "Found {count} movies"
   }
 }
