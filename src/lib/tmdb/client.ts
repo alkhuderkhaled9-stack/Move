@@ -172,3 +172,33 @@ export async function getMovieVideos(id: number): Promise<unknown> {
     "force-cache"
   );
 }
+
+// Get all movie genres
+export async function getGenres(): Promise<{ genres: { id: number; name: string }[] }> {
+  return tmdbFetch(
+    `/genre/movie/list`,
+    {
+      parse: (data: unknown) => data as { genres: { id: number; name: string }[] }
+    },
+    "force-cache"
+  );
+}
+
+// Discover movies with filters
+export async function discoverMovies(params: {
+  page?: number;
+  with_genres?: string;
+  sort_by?: string;
+}): Promise<TMDBResponse<Movie>> {
+  const queryParams = new URLSearchParams();
+
+  if (params.page) queryParams.append('page', params.page.toString());
+  if (params.with_genres) queryParams.append('with_genres', params.with_genres);
+  if (params.sort_by) queryParams.append('sort_by', params.sort_by);
+
+  return tmdbFetch(
+    `/discover/movie?${queryParams.toString()}`,
+    tmdbResponseSchema(movieSchema),
+    "no-store"
+  );
+}
